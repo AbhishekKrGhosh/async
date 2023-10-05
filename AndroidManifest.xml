@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/myown"
+        tools:targetApi="31">
+        <activity
+            android:name=".BatteryStatusActivity"
+            android:exported="true"
+            >
+
+        </activity>
+        <activity
+            android:name=".WifiStateChangeActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".AirplaneReceiverActivityDemo"
+            android:exported="true" />
+        <activity
+            android:name=".BoundServiceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForegroundServiceActivityDemo"
+            android:exported="true" />
+        <activity
+            android:name=".UnboundServiceDemo"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/activitySpecific">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyUnboundServiceDemo" />
+        <service android:name=".ForegroundDemo" />
+        <service android:name=".BoundServiceDemo" />
+    </application>
+
+</manifest>
